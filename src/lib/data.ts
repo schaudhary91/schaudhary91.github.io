@@ -123,7 +123,7 @@ export const overviewContent = {
     "Throughout my career at companies like Google and LinkedIn, I've been instrumental in developing scalable web applications, championing accessibility, and fostering collaborative environments. I thrive on solving complex problems and translating product visions into tangible, delightful digital products.",
     "I'm driven by a continuous learning mindset and a commitment to leveraging technology to create impactful solutions. When I'm not immersed in code or strategy, I enjoy [Your Hobby 1] and [Your Hobby 2]."
   ],
-  imageUrl: "https://placehold.co/300x300.png",
+  imageUrl: "/images/main-image.jpeg",
   imageAlt: "A professional photo of Sandeep Chaudhary",
   dataAiHint: "professional portrait"
 };

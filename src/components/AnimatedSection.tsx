@@ -1,6 +1,6 @@
 
 "use client";
-import { useEffect, useRef, useState, type ReactNode, type ComponentPropsWithoutRef, type ElementRef } from 'react';
+import { useEffect, useRef, useState, type ReactNode, type ComponentPropsWithoutRef, type ElementRef, type Element } from 'react';
 import { cn } from '@/lib/utils';
 
 // Use keyof JSX.IntrinsicElements for C to represent valid HTML/SVG tag names.
@@ -49,8 +49,7 @@ export function AnimatedSection<C extends keyof JSX.IntrinsicElements = 'section
 
     const currentRef = sectionRef.current;
     if (currentRef) {
-      // currentRef is now correctly typed (e.g., HTMLDivElement, SVGSymbolElement)
-      observer.observe(currentRef);
+      if (currentRef instanceof Element) observer.observe(currentRef);
     }
 
     return () => {

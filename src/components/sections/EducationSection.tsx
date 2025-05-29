@@ -1,7 +1,7 @@
 import { Container } from '@/components/ui/container';
 import { SectionTitle } from '@/components/ui/SectionTitle';
 import { educationData } from '@/lib/data';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import { GraduationCap } from 'lucide-react';
 

@@ -23,8 +23,7 @@ export function OverviewSection() {
           <CardContent className="p-6 sm:p-8 md:w-2/3">
             {overviewContent.paragraphs.map((paragraph, index) => (
               <p key={index} className="text-foreground/80 mb-4 last:mb-0 leading-relaxed">
-                {paragraph.replace("[Your Name]", "Your Name").replace("[Number]", "15+")} 
-                {/* Replace placeholders with actual data or make them dynamic */}
+                {paragraph}
               </p>
             ))}
           </CardContent>

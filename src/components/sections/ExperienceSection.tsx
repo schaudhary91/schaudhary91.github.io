@@ -15,16 +15,16 @@ export function ExperienceSection() {
           <div key={index} className="relative flex items-start md:space-x-6">
             <div className="hidden md:block md:w-1/2 md:text-right">
               {index % 2 === 0 && (
-                 <JobCard job={job} index={index} alignment="right"/>
+                 <JobCard job={job} />
               )}
             </div>
             {/* Timeline bullet removed from here */}
              <div className="md:hidden w-full ml-12">
-               <JobCard job={job} index={index} alignment="left"/>
+               <JobCard job={job} />
             </div>
             <div className="hidden md:block md:w-1/2">
               {index % 2 !== 0 && (
-                <JobCard job={job} index={index} alignment="left"/>
+                <JobCard job={job} />
               )}
             </div>
           </div>
@@ -34,7 +34,7 @@ export function ExperienceSection() {
   );
 }
 
-function JobCard({ job, index, alignment }: { job: (typeof experienceData)[0], index: number, alignment: 'left' | 'right' }) {
+function JobCard({ job }: { job: (typeof experienceData)[0] }) {
   return (
     <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 w-full">
       <CardHeader className="flex flex-row items-start gap-4">
@@ -61,4 +61,3 @@ function JobCard({ job, index, alignment }: { job: (typeof experienceData)[0], i
     </Card>
   );
 }
-

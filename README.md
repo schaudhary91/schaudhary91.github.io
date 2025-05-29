@@ -1,5 +1,7 @@
-# Firebase Studio
+# Hello, I'm Sandeep Chaudhary
 
-This is a NextJS starter in Firebase Studio.
 
-To get started, take a look at src/app/page.tsx.
+**UX Engineering Manager**
+
+
+Crafting seamless digital experiences and leading innovative teams to build impactful, user-centric web solutions.

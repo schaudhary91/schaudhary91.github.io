@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
-import { ArrowDown, FileText } from 'lucide-react';
+import { ArrowDown, FileText, Mail } from 'lucide-react'; // Added Mail icon
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -31,7 +31,7 @@ export function HeroSection() {
           <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
             <Button size="lg" asChild className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
               <Link href="#contact">
-                Get in Touch <ArrowDown className="ml-2 h-5 w-5 animate-bounce" />
+                Get in Touch <Mail className="ml-2 h-5 w-5" /> {/* Changed icon here */}
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">

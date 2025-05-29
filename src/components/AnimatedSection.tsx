@@ -42,7 +42,7 @@ export function AnimatedSection({ children, className, as: Component = 'section'
   
   return (
     <Component
-      ref={sectionRef}
+      ref={sectionRef as React.RefObject<HTMLElement>}
       id={id}
       className={cn(
         'transition-all duration-700 ease-out',

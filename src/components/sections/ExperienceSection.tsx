@@ -12,7 +12,7 @@ export function ExperienceSection() {
       <SectionTitle>Work Experience</SectionTitle>
       <div className="relative space-y-12 before:absolute before:top-0 before:bottom-0 before:w-1 before:bg-border before:left-6 md:before:left-1/2 md:before:-translate-x-1/2">
         {experienceData.map((job, index) => (
-          <div key={index} className="relative flex items-start md:space-x-6 md:space-x-reverse">
+          <div key={index} className="relative flex items-start md:space-x-6">
             <div className="hidden md:block md:w-1/2 md:text-right">
               {index % 2 === 0 && (
                  <JobCard job={job} index={index} alignment="right"/>
@@ -39,11 +39,11 @@ function JobCard({ job, index, alignment }: { job: (typeof experienceData)[0], i
     <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 w-full">
       <CardHeader className="flex flex-row items-start gap-4">
         {job.logo ? (
-          <Image 
-            src={job.logo} 
-            alt={`${job.company} logo`} 
-            width={48} 
-            height={48} 
+          <Image
+            src={job.logo}
+            alt={`${job.company} logo`}
+            width={48}
+            height={48}
             className="rounded-lg"
             data-ai-hint={job.dataAiHint || "company logo"}
           />
@@ -61,4 +61,3 @@ function JobCard({ job, index, alignment }: { job: (typeof experienceData)[0], i
     </Card>
   );
 }
-

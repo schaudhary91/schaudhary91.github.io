@@ -4,16 +4,15 @@ import { cn } from '@/lib/utils';
 
 type AnimatedSectionProps = {
   children: ReactNode;
-  className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  className?: string; // Add a prop for className
+  as?: keyof JSX.IntrinsicElements; // Add a prop to specify the element type
   id?: string;
   delay?: number; // delay in milliseconds
 };
-type HTMLTag = keyof JSX.IntrinsicElements;
 export function AnimatedSection({ children, className, as: Component = 'section', id, delay = 0 }: AnimatedSectionProps) {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -39,10 +38,10 @@ export function AnimatedSection({ children, className, as: Component = 'section'
         observer.unobserve(currentRef);
       }
     };
-  }, [delay]);
-
+  }, [delay]); // Add delay to the dependency array
+  
   return (
-    <Component as={Component as HTMLTag}
+    <Component
       ref={sectionRef}
       id={id}
       className={cn(
@@ -55,3 +54,4 @@ export function AnimatedSection({ children, className, as: Component = 'section'
     </Component>
   );
 }
+

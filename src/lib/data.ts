@@ -7,7 +7,6 @@ export const navLinks: NavLinkItem[] = [
   { href: '#experience', label: 'Experience' },
   { href: '#education', label: 'Education' },
   { href: '#skills', label: 'Skills' },
-  { href: '#resume-generator', label: 'Resume AI' },
   { href: '#contact', label: 'Contact' },
 ];
 

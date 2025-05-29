@@ -5,7 +5,6 @@ import { OverviewSection } from '@/components/sections/OverviewSection';
 import { ExperienceSection } from '@/components/sections/ExperienceSection';
 import { EducationSection } from '@/components/sections/EducationSection';
 import { SkillsSection } from '@/components/sections/SkillsSection';
-import { ResumeGeneratorSection } from '@/components/sections/ResumeGeneratorSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { AnimatedSection } from '@/components/AnimatedSection';
 
@@ -34,10 +33,6 @@ export default function HomePage() {
         
         <AnimatedSection as="div" id="skills-wrapper" delay={300}>
           <SkillsSection />
-        </AnimatedSection>
-        
-        <AnimatedSection as="div" id="resume-generator-wrapper" delay={400}>
-          <ResumeGeneratorSection />
         </AnimatedSection>
         
         <AnimatedSection as="div" id="contact-wrapper" delay={500}>

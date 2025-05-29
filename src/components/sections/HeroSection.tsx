@@ -14,12 +14,12 @@ export function HeroSection() {
       <Container className="relative z-10 !py-0">
         <div className="max-w-3xl mx-auto">
           <Image 
-            src="https://placehold.co/150x150.png" 
-            alt="Sandeep Chaudhary" 
+            src="/profile-sandeep-chaudhary.jpg" 
+            alt="Sandeep Chaudhary profile picture" 
             width={150} 
             height={150} 
             className="rounded-full mx-auto mb-8 shadow-xl border-4 border-accent"
-            data-ai-hint="professional portrait" 
+            data-ai-hint="profile picture" 
           />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
             <span className="block text-primary">Hello, I&apos;m Sandeep Chaudhary</span>

@@ -45,9 +45,8 @@ export function Header() {
     )}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="#home" className="flex items-center space-x-2 text-primary hover:text-accent transition-colors">
+          <Link href="#home" className="flex items-center text-primary hover:text-accent transition-colors">
             <Briefcase className="h-8 w-8" />
-            <span className="font-bold text-xl">sandeepchaudhary.com</span>
           </Link>
 
           <nav className="hidden md:flex space-x-1">

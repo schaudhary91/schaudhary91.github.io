@@ -113,7 +113,7 @@ export const skillsData: SkillItem[] = [
 export const contactLinks: ContactLinkItem[] = [
   { href: 'mailto:sachaudhary91@gmail.com', label: 'Email', icon: Mail },
   { href: 'https://www.linkedin.com/in/sandeepchaudhary91/', label: 'LinkedIn', icon: Linkedin },
-  { href: '/files/resume.pdf', label: 'Resume (PDF)', icon: FileText }, // Assuming a resume PDF is in public folder
+  { href: '/resume/resume.pdf', label: 'Resume (PDF)', icon: FileText }, // Assuming a resume PDF is in public folder
 ];
 
 export const overviewContent = {

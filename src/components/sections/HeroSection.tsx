@@ -35,7 +35,7 @@ export function HeroSection() {
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-              <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Link href="/resume/resume.pdf" target="_blank" rel="noopener noreferrer">
                 Download CV <FileText className="ml-2 h-5 w-5" />
               </Link>
             </Button>

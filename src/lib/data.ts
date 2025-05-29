@@ -112,7 +112,7 @@ export const skillsData: SkillItem[] = [
 
 export const contactLinks: ContactLinkItem[] = [
   { href: 'mailto:sachaudhary91@gmail.com', label: 'Email', icon: Mail },
-  { href: 'https://linkedin.com/in/sandeepchaudhary', label: 'LinkedIn', icon: Linkedin },
+  { href: 'https://www.linkedin.com/in/sandeepchaudhary91/', label: 'LinkedIn', icon: Linkedin },
   { href: '/resume.pdf', label: 'Resume (PDF)', icon: FileText }, // Assuming a resume PDF is in public folder
 ];
 
@@ -127,3 +127,4 @@ export const overviewContent = {
   imageAlt: "A professional photo of Sandeep Chaudhary",
   dataAiHint: "professional portrait"
 };
+

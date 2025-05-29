@@ -15,14 +15,14 @@ export function HeroSection() {
         <div className="max-w-3xl mx-auto">
           <Image 
             src="https://placehold.co/150x150.png" 
-            alt="Your Name" 
+            alt="Sandeep Chaudhary" 
             width={150} 
             height={150} 
             className="rounded-full mx-auto mb-8 shadow-xl border-4 border-accent"
             data-ai-hint="professional portrait" 
           />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
-            <span className="block text-primary">Hello, I&apos;m Your Name</span>
+            <span className="block text-primary">Hello, I&apos;m Sandeep Chaudhary</span>
             <span className="block text-accent mt-2 sm:mt-3">UX Engineering Manager</span>
           </h1>
           <p className="mt-6 max-w-xl mx-auto text-lg sm:text-xl text-foreground/80">

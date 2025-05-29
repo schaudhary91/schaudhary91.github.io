@@ -47,7 +47,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="#home" className="flex items-center space-x-2 text-primary hover:text-accent transition-colors">
             <Briefcase className="h-8 w-8" />
-            <span className="font-bold text-xl">WebWeave</span>
+            <span className="font-bold text-xl">sandeepchaudhary.com</span>
           </Link>
 
           <nav className="hidden md:flex space-x-1">

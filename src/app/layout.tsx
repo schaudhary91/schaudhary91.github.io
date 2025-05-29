@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react"
 
 
 export const metadata: Metadata = {
-  title: 'Your Name - WebWeave | Personal Portfolio',
+  title: 'Sandeep Chaudhary - sandeepchaudhary.com | Personal Portfolio',
   description: 'A personal portfolio website showcasing skills, experience, and education. Built with Next.js and modern design principles.',
 };
 

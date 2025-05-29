@@ -112,19 +112,19 @@ export const skillsData: SkillItem[] = [
 
 export const contactLinks: ContactLinkItem[] = [
   { href: 'mailto:your.email@example.com', label: 'Email', icon: Mail },
-  { href: 'https://linkedin.com/in/yourprofile', label: 'LinkedIn', icon: Linkedin },
-  { href: 'https://github.com/yourusername', label: 'GitHub', icon: Github },
+  { href: 'https://linkedin.com/in/sandeepchaudhary', label: 'LinkedIn', icon: Linkedin },
+  { href: 'https://github.com/sandeepchaudhary', label: 'GitHub', icon: Github },
   { href: '/resume.pdf', label: 'Resume (PDF)', icon: FileText }, // Assuming a resume PDF is in public folder
 ];
 
 export const overviewContent = {
   title: "A Bit About Me",
   paragraphs: [
-    "Hello! I'm [Your Name], a passionate and results-oriented UX Engineering Manager with over [Number] years of experience in building and leading high-performing teams to deliver exceptional user experiences. My expertise lies at the intersection of cutting-edge frontend technologies, user-centric design, and effective project management.",
+    "Hello! I'm Sandeep Chaudhary, a passionate and results-oriented UX Engineering Manager with over [Number] years of experience in building and leading high-performing teams to deliver exceptional user experiences. My expertise lies at the intersection of cutting-edge frontend technologies, user-centric design, and effective project management.",
     "Throughout my career at companies like Google and LinkedIn, I've been instrumental in developing scalable web applications, championing accessibility, and fostering collaborative environments. I thrive on solving complex problems and translating product visions into tangible, delightful digital products.",
     "I'm driven by a continuous learning mindset and a commitment to leveraging technology to create impactful solutions. When I'm not immersed in code or strategy, I enjoy [Your Hobby 1] and [Your Hobby 2]."
   ],
   imageUrl: "https://placehold.co/300x300.png",
-  imageAlt: "A professional photo of [Your Name]",
+  imageAlt: "A professional photo of Sandeep Chaudhary",
   dataAiHint: "professional portrait"
 };

@@ -14,7 +14,7 @@ export function HeroSection() {
       <Container className="relative z-10 !py-0">
         <div className="max-w-3xl mx-auto">
           <Image 
-            src="/images/profile-image.JPG" 
+            src="images/profile-image.JPG" 
             alt="Sandeep Chaudhary profile picture" 
             width={150} 
             height={150} 

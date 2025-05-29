@@ -9,7 +9,7 @@ type AnimatedSectionProps = {
   id?: string;
   delay?: number; // delay in milliseconds
 };
-
+type HTMLTag = keyof JSX.IntrinsicElements;
 export function AnimatedSection({ children, className, as: Component = 'section', id, delay = 0 }: AnimatedSectionProps) {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -42,7 +42,7 @@ export function AnimatedSection({ children, className, as: Component = 'section'
   }, [delay]);
 
   return (
-    <Component
+    <Component as={Component as HTMLTag}
       ref={sectionRef}
       id={id}
       className={cn(

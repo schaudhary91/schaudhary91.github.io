@@ -1,5 +1,5 @@
 import type { EducationItem, ExperienceItem, SkillItem, NavLinkItem, ContactLinkItem } from './types';
-import { Briefcase, GraduationCap, Code, Zap, Users, TrendingUp, Linkedin, Mail, FileText, Lightbulb, Settings, BarChartBig, Palette, Server, Cloud, Database, TestTube2, PenTool } from 'lucide-react';
+import { Briefcase, Code, Zap, Users, TrendingUp, Linkedin, Mail, FileText, Lightbulb, Settings, BarChartBig, Palette, Server, Cloud, Database, TestTube2, PenTool } from 'lucide-react';
 
 export const navLinks: NavLinkItem[] = [
   { href: '#home', label: 'Home' },

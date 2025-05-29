@@ -20,9 +20,6 @@ export function Footer() {
         <p className="text-sm">
           &copy; {currentYear} Sandeep Chaudhary. All rights reserved.
         </p>
-        <p className="text-xs mt-1">
-          Built with Next.js and Tailwind CSS. Designed by sandeepchaudhary.com.
-        </p>
       </div>
     </footer>
   );

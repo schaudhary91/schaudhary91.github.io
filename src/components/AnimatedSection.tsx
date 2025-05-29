@@ -54,7 +54,7 @@ export function AnimatedSection<C extends keyof JSX.IntrinsicElements = 'section
 
     return () => {
       if (currentRef) {
-        observer.unobserve(currentRef);
+ if (currentRef instanceof Element) observer.unobserve(currentRef);
       }
     };
   }, [delay]); // Add delay to the dependency array

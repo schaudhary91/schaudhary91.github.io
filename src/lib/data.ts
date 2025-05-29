@@ -15,21 +15,21 @@ export const educationData: EducationItem[] = [
     degree: 'Project Management Principles and Practices',
     uni: 'University of California, Irvine on Coursera',
     year: '2018',
-    logo: 'https://placehold.co/40x40.png',
-    dataAiHint: 'university logo'
+    logo: '/images/uci-logo.png',
+    dataAiHint: 'UCI logo'
   },
   {
     degree: 'Diploma in Advanced Computing',
     uni: 'Centre for Development of Advanced Computing (C-DAC)',
     year: '2008',
-    logo: 'https://placehold.co/40x40.png',
+    logo: '/images/cdac_acts_pune_logo.jpeg',
     dataAiHint: 'institute logo'
   },
   {
     degree: 'B.Tech, Information Technology',
     uni: 'Krishna Institute of Engineering & Technology',
     year: '2003 - 2007',
-    logo: 'https://placehold.co/40x40.png',
+    logo: '/images/kiet-logo.jpeg',
     dataAiHint: 'college logo'
   },
 ];
@@ -40,7 +40,7 @@ export const experienceData: ExperienceItem[] = [
     position: 'Manager II, UX / UI Engineering',
     duration: 'Jun, 2024 – Present',
     summary: 'Managing Ads Central UX Engineering teams with a focus on accessibility and Quantitative user research infrastructure.',
-    logo: 'https://placehold.co/48x48.png',
+    logo: '/images/google-logo.jpeg',
     dataAiHint: 'Google logo'
   },
   {
@@ -48,7 +48,7 @@ export const experienceData: ExperienceItem[] = [
     position: 'Technical Lead Manager',
     duration: 'Nov, 2020 – Jun, 2024',
     summary: "Set and communicate team priorities that support the broader organization's goals. Align strategy, processes, and decision-making across teams. Set clear expectations with individuals based on their level and role. Meet regularly with individuals to discuss performance and development and provide feedback and coaching. Oversee systems designs within the scope of the broader area, and review product or system development code to solve ambiguous problems.",
-    logo: 'https://placehold.co/48x48.png',
+    logo: '/images/google-logo.jpeg',
     dataAiHint: 'Google logo'
   },
   {
@@ -56,7 +56,7 @@ export const experienceData: ExperienceItem[] = [
     position: 'Staff Software Engineer - Frontend',
     duration: 'Apr, 2015 – Nov, 2020',
     summary: 'Own the front-end development for one or more of LinkedIn products lead key tracks/ teams and mentor team members, collaborate with visual/interaction designers, other engineers, and product managers to launch new products, iterate on existing features, and build a world-class user experience. Make the site delightful, secure, performant and accessible to all our members. Implement cutting-edge technologies and write state-of-the-art code to keep LinkedIn at the cutting edge of current technology.',
-    logo: 'https://placehold.co/48x48.png',
+    logo: '/images/linkedin-logo.png',
     dataAiHint: 'LinkedIn logo'
   },
   {
@@ -64,7 +64,7 @@ export const experienceData: ExperienceItem[] = [
     position: 'Senior Interactive Developer L2',
     duration: 'Sep, 2012 – Apr, 2015',
     summary: 'Responsible for leading key tracks/ teams and mentoring team members in key AJAX/Interactive technologies. This includes estimating and planning components to be delivered and following current Sapient development methodologies (SA3)',
-    logo: 'https://placehold.co/48x48.png',
+    logo: '/images/sapient_logo.jpeg',
     dataAiHint: 'Sapient logo'
   },
   {
@@ -72,7 +72,7 @@ export const experienceData: ExperienceItem[] = [
     position: 'Senior Software Engineer',
     duration: 'Jan, 2012 – Sep, 2012',
     summary: 'Lead the track for creation of JavaScript UI Base Framework based on Scalable JavaScript application architecture.',
-    logo: 'https://placehold.co/48x48.png',
+    logo: '/images/pubmatic-logo.jpeg',
     dataAiHint: 'Pubmatic logo'
   },
   {
@@ -80,7 +80,7 @@ export const experienceData: ExperienceItem[] = [
     position: 'Senior Software Engineer',
     duration: 'Sep, 2008 – Dec, 2011',
     summary: 'Build ecommerce websites using CSS, HTML, JavaScript, jQuery, AJAX, JSP and XML/XSL. Implement AB tests for site optimization purposes.',
-    logo: 'https://placehold.co/48x48.png',
+    logo: '/images/cybage-logo.jpeg',
     dataAiHint: 'Cybage logo'
   },
 ];
@@ -113,15 +113,15 @@ export const skillsData: SkillItem[] = [
 export const contactLinks: ContactLinkItem[] = [
   { href: 'mailto:sachaudhary91@gmail.com', label: 'Email', icon: Mail },
   { href: 'https://www.linkedin.com/in/sandeepchaudhary91/', label: 'LinkedIn', icon: Linkedin },
-  { href: '/resume.pdf', label: 'Resume (PDF)', icon: FileText }, // Assuming a resume PDF is in public folder
+  { href: '/files/resume.pdf', label: 'Resume (PDF)', icon: FileText }, // Assuming a resume PDF is in public folder
 ];
 
 export const overviewContent = {
   title: "A Bit About Me",
   paragraphs: [
-    "Hello! I'm Sandeep Chaudhary, a passionate and results-oriented UX Engineering Manager with over 15+ years of experience in building and leading high-performing teams to deliver exceptional user experiences. My expertise lies at the intersection of cutting-edge frontend technologies, user-centric design, and effective project management.",
+    "Hello! I'm Sandeep Chaudhary, a passionate and results-oriented UX Engineering Manager with over 16+ years of experience in building and leading high-performing teams to deliver exceptional user experiences. My expertise lies at the intersection of cutting-edge frontend technologies, user-centric design, and effective project management.",
     "Throughout my career at companies like Google and LinkedIn, I've been instrumental in developing scalable web applications, championing accessibility, and fostering collaborative environments. I thrive on solving complex problems and translating product visions into tangible, delightful digital products.",
-    "I'm driven by a continuous learning mindset and a commitment to leveraging technology to create impactful solutions. When I'm not immersed in code or strategy, I enjoy [Your Hobby 1] and [Your Hobby 2]."
+    "I'm driven by a continuous learning mindset and a commitment to leveraging technology to create impactful solutions."
   ],
   imageUrl: "/images/main-image.jpeg",
   imageAlt: "A professional photo of Sandeep Chaudhary",

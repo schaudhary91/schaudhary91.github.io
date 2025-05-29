@@ -60,7 +60,7 @@ export function AnimatedSection<C extends keyof JSX.IntrinsicElements = 'section
   }, [delay]); // Add delay to the dependency array
   
   return (
-    // @ts-expect-error
+    // @ts-expect-error Not an issue for component
     <ComponentToRender
       ref={sectionRef} // The ref is now correctly typed for ComponentToRender
       id={id}

@@ -18,7 +18,7 @@ export function ExperienceSection() {
                  <JobCard job={job} index={index} alignment="right"/>
               )}
             </div>
-            <div className="absolute top-1 left-6 w-3 h-3 bg-primary rounded-full transform -translate-x-1/2 border-4 border-background md:left-1/2 md:top-6 md:transform md:space-x-reverse md:-translate-x-1/2"></div>
+            {/* Timeline bullet removed from here */}
              <div className="md:hidden w-full ml-12">
                <JobCard job={job} index={index} alignment="left"/>
             </div>

@@ -8,7 +8,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { format } from 'date-fns';
 import NProgress from 'nprogress';
-import type { MouseEvent } from 'react';
 
 interface BlogCardClientProps {
   post: BlogPost;

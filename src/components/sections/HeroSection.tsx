@@ -6,7 +6,6 @@ import { ArrowDown, FileText, Mail, Newspaper } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import NProgress from 'nprogress';
-import { MouseEvent } from 'react';
 
 export function HeroSection() {
 

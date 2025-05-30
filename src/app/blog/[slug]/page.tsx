@@ -1,4 +1,5 @@
-import { getPostData, getAllPostSlugs, type BlogPost } from '@/lib/blog';
+import { getPostData, getAllPostSlugs } from '@/lib/blog';
+import type { BlogPost } from '@/lib/types'; // Updated import
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Container } from '@/components/ui/container';

@@ -34,3 +34,16 @@ export interface ContactLinkItem {
   label: string;
   icon: LucideIcon;
 }
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  date: string; // Store as string, format in component
+  author: string;
+  summary: string;
+  coverImage?: string;
+  coverImageAlt?: string;
+  dataAiHint?: string;
+  tags?: string[];
+  contentHtml?: string; // For individual post, generated from markdown
+}

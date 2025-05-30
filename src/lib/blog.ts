@@ -3,21 +3,9 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import type { BlogPost } from './types'; // Updated import
 
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
-
-export interface BlogPost {
-  slug: string;
-  title: string;
-  date: string;
-  author: string;
-  summary: string;
-  coverImage?: string;
-  coverImageAlt?: string;
-  dataAiHint?: string;
-  tags?: string[];
-  contentHtml?: string; // For individual post
-}
 
 export function getSortedPostsData(): BlogPost[] {
   // Get file names under /src/content/blog

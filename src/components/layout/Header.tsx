@@ -1,3 +1,4 @@
+
 "use client";
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -5,6 +6,7 @@ import { navLinks } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Briefcase } from 'lucide-react'; // Using Briefcase as a placeholder logo
 import { cn } from '@/lib/utils';
+import NProgress from 'nprogress';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,13 +19,16 @@ export function Header() {
 
       let currentSection = '';
       navLinks.forEach(link => {
-        const sectionId = link.href.substring(1); // remove #
-        const sectionElement = document.getElementById(sectionId);
-        if (sectionElement) {
-          const rect = sectionElement.getBoundingClientRect();
-          // Check if section is in viewport (top is above half screen, bottom is below half screen)
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            currentSection = sectionId;
+        // Ensure we only try to find elements for hash links
+        if (link.href.startsWith('#')) {
+          const sectionId = link.href.substring(1); // remove #
+          const sectionElement = document.getElementById(sectionId);
+          if (sectionElement) {
+            const rect = sectionElement.getBoundingClientRect();
+            // Check if section is in viewport (top is above half screen, bottom is below half screen)
+            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+              currentSection = sectionId;
+            }
           }
         }
       });
@@ -38,6 +43,16 @@ export function Header() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const handleLinkClick = (href: string) => {
+    setIsOpen(false);
+    if (href.startsWith('#')) {
+      NProgress.done(); // Ensure progress bar stops for hash links
+      // Manually set active section for hash links for faster UI update
+      setActiveSection(href.substring(1));
+    }
+    // For page navigations, TopProgressBar will handle NProgress
+  };
+
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
@@ -45,7 +60,7 @@ export function Header() {
     )}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="#home" className="flex items-center text-primary hover:text-accent transition-colors">
+          <Link href="#home" onClick={() => handleLinkClick('#home')} className="flex items-center text-primary hover:text-accent transition-colors">
             <Briefcase className="h-8 w-8" />
           </Link>
 
@@ -53,10 +68,12 @@ export function Header() {
             {navLinks.map((link) => (
               <Link key={link.label} href={link.href} passHref legacyBehavior>
                 <a
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => handleLinkClick(link.href)}
                   className={cn(
                     "px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent",
-                    activeSection === link.href.substring(1) ? "text-accent font-semibold" : "text-foreground/80"
+                    (activeSection === link.href.substring(1) && link.href.startsWith('#')) || (typeof window !== 'undefined' && window.location.pathname === link.href && !link.href.startsWith('#'))
+                      ? "text-accent font-semibold" 
+                      : "text-foreground/80"
                   )}
                 >
                   {link.label}
@@ -80,10 +97,12 @@ export function Header() {
             {navLinks.map((link) => (
               <Link key={link.label} href={link.href} passHref legacyBehavior>
                 <a
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => handleLinkClick(link.href)}
                   className={cn(
                     "block px-3 py-2 rounded-md text-base font-medium transition-colors hover:bg-accent/10 hover:text-accent",
-                     activeSection === link.href.substring(1) ? "text-accent bg-accent/5" : "text-foreground/80"
+                    (activeSection === link.href.substring(1) && link.href.startsWith('#')) || (typeof window !== 'undefined' && window.location.pathname === link.href && !link.href.startsWith('#'))
+                      ? "text-accent bg-accent/5" 
+                      : "text-foreground/80"
                   )}
                 >
                   {link.label}

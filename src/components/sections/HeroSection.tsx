@@ -21,7 +21,7 @@ export function HeroSection() {
       <Container className="relative z-10 !py-0">
         <div className="max-w-3xl mx-auto">
           <Image 
-            src="/images/profile-image.JPG" 
+            src="/images/profile-image.JPG"
             alt="Sandeep Chaudhary profile picture" 
             width={150} 
             height={150} 
@@ -38,6 +38,11 @@ export function HeroSection() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4">
             <Button size="lg" asChild className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+              <Link href="/blog" onClick={handleLinkClick}>
+                Explore Tech Threads <Newspaper className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
               <Link href="#contact" onClick={handleLinkClick}>
                 Get in Touch <Mail className="ml-2 h-5 w-5" />
               </Link>
@@ -45,11 +50,6 @@ export function HeroSection() {
             <Button variant="outline" size="lg" asChild className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
               <Link href="/resume/resume.pdf" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>
                 Download CV <FileText className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-              <Link href="/blog" onClick={handleLinkClick}>
-                Explore Tech Threads <Newspaper className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>

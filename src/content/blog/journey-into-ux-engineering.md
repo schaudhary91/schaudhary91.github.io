@@ -4,8 +4,8 @@ date: "2024-07-15"
 author: "Sandeep Chaudhary"
 slug: "journey-into-ux-engineering"
 summary: "Reflections on my career path and the evolving role of a UX Engineer."
-coverImage: "https://placehold.co/800x400.png"
-coverImageAlt: "Winding path"
+coverImage: "/images/my_journey_banner.png"
+coverImageAlt: "career path"
 dataAiHint: "career path"
 tags: ["career", "ux", "engineering"]
 ---

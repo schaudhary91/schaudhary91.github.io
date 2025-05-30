@@ -1,14 +1,14 @@
 import type { EducationItem, ExperienceItem, SkillItem, NavLinkItem, ContactLinkItem } from './types';
-import { Briefcase, Code, Zap, Users, TrendingUp, Linkedin, Mail, FileText, Lightbulb, Settings, BarChartBig, Palette, Server, Cloud, Database, TestTube2, PenTool } from 'lucide-react';
+import { Briefcase, Code, Zap, Users, TrendingUp, Linkedin, Mail, FileText, Lightbulb, Settings, BarChartBig, Palette, Server, Cloud, Database, TestTube2, PenTool, Newspaper } from 'lucide-react';
 
 export const navLinks: NavLinkItem[] = [
-  { href: '#home', label: 'Home' },
-  { href: '#overview', label: 'Overview' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#education', label: 'Education' },
-  { href: '#skills', label: 'Skills' },
+  { href: '/#home', label: 'Home' },
+  { href: '/#overview', label: 'Overview' },
+  { href: '/#experience', label: 'Experience' },
+  { href: '/#education', label: 'Education' },
+  { href: '/#skills', label: 'Skills' },
   { href: '/blog', label: 'Tech Threads' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export const educationData: EducationItem[] = [

@@ -14,16 +14,9 @@ export function TopProgressBar() {
   }, []);
 
   useEffect(() => {
-    // When the pathname or searchParams change, the new page/route is rendering.
-    // We call NProgress.done() here to signal that the navigation is complete
-    // from NProgress's perspective.
+    // When the pathname or searchParams change, this means navigation has likely completed.
     NProgress.done();
-
-    return () => {
-      // The cleanup function runs when the dependencies (pathname, searchParams) are about to change,
-      // or when the component unmounts. This is where we start NProgress for the upcoming navigation.
-      NProgress.start();
-    };
+    // NProgress.start() is now handled by individual link clicks in the Header.
   }, [pathname, searchParams]);
 
   return null;

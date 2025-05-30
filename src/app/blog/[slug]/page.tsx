@@ -12,9 +12,15 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+type Props = {
+  params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
   try {
-    const post = await getPostData(params.slug);
+    const post = await getPostData(slug);
     if (!post) {
       return {
         title: 'Post Not Found | Tech Threads',
@@ -41,7 +47,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       },
     };
   } catch (error) {
-    console.error(`Error generating metadata for slug ${params.slug}:`, error);
+    console.error(`Error generating metadata for slug ${slug}:`, error);
     return {
       title: 'Error | Tech Threads',
       description: 'Could not load blog post details.',
@@ -56,12 +62,14 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }): Promise<React.ReactElement> {
+export default async function BlogPostPage({ params }: Props): Promise<React.ReactElement> {
   let post: BlogPost;
+  const { slug } = await params
+
   try {
-    post = await getPostData(params.slug);
+    post = await getPostData(slug);
   } catch (error) {
-    console.error(`Error fetching post data for slug ${params.slug}:`, error);
+    console.error(`Error fetching post data for slug ${slug}:`, error);
     notFound(); 
   }
 

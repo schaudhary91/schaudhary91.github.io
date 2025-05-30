@@ -7,6 +7,7 @@ export const navLinks: NavLinkItem[] = [
   { href: '#experience', label: 'Experience' },
   { href: '#education', label: 'Education' },
   { href: '#skills', label: 'Skills' },
+  { href: '/blog', label: 'Tech Threads' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -127,4 +128,3 @@ export const overviewContent = {
   imageAlt: "A professional photo of Sandeep Chaudhary",
   dataAiHint: "professional portrait"
 };
-

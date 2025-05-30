@@ -96,6 +96,32 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+
+    /* Dark mode prose specific variables */
+    --prose-body: hsl(var(--foreground));
+    --prose-headings: hsl(var(--primary));
+    --prose-links: hsl(var(--accent));
+    --prose-bold: hsl(var(--foreground));
+    --prose-code: hsl(var(--foreground));
+    --prose-pre-code: hsl(var(--foreground));
+    --prose-pre-bg: hsl(var(--muted) / 0.5); /* Slightly transparent muted */
+    --prose-quote-borders: hsl(var(--border));
+    --prose-captions: hsl(var(--muted-foreground));
+    --prose-hr: hsl(var(--border));
+  }
+
+  /* Light mode prose variables */
+  :root {
+    --prose-body: hsl(var(--foreground));
+    --prose-headings: hsl(var(--primary));
+    --prose-links: hsl(var(--accent));
+    --prose-bold: hsl(var(--foreground));
+    --prose-code: hsl(var(--foreground)); /* Code text color */
+    --prose-pre-code: hsl(var(--foreground)); /* Text color inside pre */
+    --prose-pre-bg: hsl(var(--muted) / 0.5); /* Background for pre */
+    --prose-quote-borders: hsl(var(--border));
+    --prose-captions: hsl(var(--muted-foreground));
+    --prose-hr: hsl(var(--border));
   }
 }
 
@@ -105,6 +131,137 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-    @apply antialiased; /* Moved from layout to ensure it's applied */
+    @apply antialiased;
+  }
+
+  /* Tailwind CSS Typography (Prose) styles */
+  .prose {
+    color: var(--prose-body);
+  }
+  .prose :where(h1,h2,h3,h4,h5,h6):not(:where([class~="not-prose"] *)) {
+    color: var(--prose-headings);
+    font-weight: 700;
+    margin-bottom: theme('spacing.3');
+    margin-top: theme('spacing.6');
+  }
+  .prose :where(h1):not(:where([class~="not-prose"] *)) {
+    font-size: theme('fontSize.3xl');
+    line-height: theme('lineHeight.tight');
+  }
+  .prose :where(h2):not(:where([class~="not-prose"] *)) {
+    font-size: theme('fontSize.2xl');
+    line-height: theme('lineHeight.snug');
+  }
+  .prose :where(h3):not(:where([class~="not-prose"] *)) {
+    font-size: theme('fontSize.xl');
+    line-height: theme('lineHeight.normal');
+  }
+   .prose :where(p):not(:where([class~="not-prose"] *)) {
+    margin-bottom: theme('spacing.4');
+    line-height: theme('lineHeight.relaxed');
+  }
+  .prose :where(a):not(:where([class~="not-prose"] *)) {
+    color: var(--prose-links);
+    text-decoration: none;
+  }
+  .prose :where(a):hover:not(:where([class~="not-prose"] *)) {
+    text-decoration: underline;
+  }
+  .prose :where(strong):not(:where([class~="not-prose"] *)) {
+    color: var(--prose-bold);
+    font-weight: 600;
+  }
+  .prose :where(ul,ol):not(:where([class~="not-prose"] *)) {
+    margin-left: theme('spacing.6');
+    margin-bottom: theme('spacing.4');
+  }
+  .prose :where(ul):not(:where([class~="not-prose"] *)) {
+    list-style-type: disc;
+  }
+  .prose :where(ol):not(:where([class~="not-prose"] *)) {
+    list-style-type: decimal;
+  }
+  .prose :where(li > p):not(:where([class~="not-prose"] *)) {
+      margin-bottom: theme('spacing.1');
+  }
+  .prose :where(blockquote):not(:where([class~="not-prose"] *)) {
+    border-left-width: 4px;
+    border-color: var(--prose-quote-borders);
+    padding-left: theme('spacing.4');
+    font-style: italic;
+    margin-top: theme('spacing.6');
+    margin-bottom: theme('spacing.6');
+    color: var(--prose-captions);
+  }
+  .prose :where(figure > figcaption):not(:where([class~="not-prose"] *)) {
+    color: var(--prose-captions);
+    font-size: theme('fontSize.sm');
+    margin-top: theme('spacing.2');
+  }
+  .prose :where(code):not(:where([class~="not-prose"] *)) {
+    background-color: hsl(var(--muted) / 0.3);
+    color: var(--prose-code);
+    font-family: theme('fontFamily.mono');
+    font-size: theme('fontSize.sm');
+    padding: theme('spacing.[0.5]') theme('spacing.1');
+    border-radius: theme('borderRadius.sm');
+    font-weight: 600;
+  }
+  .prose :where(code):not(:where([class~="not-prose"] *))::before,
+  .prose :where(code):not(:where([class~="not-prose"] *))::after {
+    content: ""; /* Remove backticks if Tailwind Typography plugin isn't used */
+  }
+  .prose :where(pre):not(:where([class~="not-prose"] *)) {
+    background-color: var(--prose-pre-bg);
+    color: var(--prose-pre-code);
+    font-family: theme('fontFamily.mono');
+    font-size: theme('fontSize.sm');
+    overflow-x: auto;
+    padding: theme('spacing.4');
+    border-radius: theme('borderRadius.md');
+    margin-top: theme('spacing.6');
+    margin-bottom: theme('spacing.6');
+  }
+  .prose :where(pre code):not(:where([class~="not-prose"] *)) {
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 0;
+    padding: 0;
+    font-weight: inherit;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+  }
+  .prose :where(hr):not(:where([class~="not-prose"] *)) {
+    border-top-width: 1px;
+    border-color: var(--prose-hr);
+    margin-top: theme('spacing.8');
+    margin-bottom: theme('spacing.8');
+  }
+  .prose :where(img):not(:where([class~="not-prose"] *)) {
+    border-radius: theme('borderRadius.lg');
+    box-shadow: theme('boxShadow.md');
+    margin-top: theme('spacing.6');
+    margin-bottom: theme('spacing.6');
+  }
+  .prose :where(table):not(:where([class~="not-prose"] *)) {
+    width: 100%;
+    margin-bottom: theme('spacing.4');
+    border-collapse: collapse;
+  }
+  .prose :where(thead):not(:where([class~="not-prose"] *)) {
+    border-bottom-width: 1px;
+    border-color: var(--prose-hr);
+  }
+  .prose :where(th):not(:where([class~="not-prose"] *)) {
+    font-weight: 600;
+    padding: theme('spacing.2') theme('spacing.3');
+    text-align: left;
+  }
+  .prose :where(td):not(:where([class~="not-prose"] *)) {
+    padding: theme('spacing.2') theme('spacing.3');
+    border-top-width: 1px;
+    border-color: var(--prose-hr);
   }
 }

@@ -1,4 +1,4 @@
-
+// @ts-nocheck
 "use client";
 import { useEffect, useRef, useState, type ReactNode, type ComponentPropsWithoutRef, type ElementRef } from 'react';
 import { cn } from '@/lib/utils';

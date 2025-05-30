@@ -56,7 +56,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }): Promise<React.ReactElement> {
+// Define the type for the props expected by the BlogPostPage component
+interface BlogPostPageProps { params: { slug: string; };}
+export default async function BlogPostPage({ params }: BlogPostPageProps): Promise<React.ReactElement> {
   let post: BlogPost;
   try {
     post = await getPostData(params.slug);

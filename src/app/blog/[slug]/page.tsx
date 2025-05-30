@@ -10,8 +10,9 @@ import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { Metadata } from 'next';
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   try {
     const post = await getPostData(params.slug);
     if (!post) {
@@ -55,7 +56,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage({ params }: { params: { slug: string } }): Promise<React.ReactElement> {
   let post: BlogPost;
   try {
     post = await getPostData(params.slug);

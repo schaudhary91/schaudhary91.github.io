@@ -62,6 +62,8 @@ export function AnimatedSection<C extends keyof JSX.IntrinsicElements = 'section
   return (
     // @ts-expect-error -- Component working correctly
     <ComponentToRender
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       ref={sectionRef} 
       id={id}
       className={cn(

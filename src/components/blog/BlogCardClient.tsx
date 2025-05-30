@@ -15,7 +15,7 @@ interface BlogCardClientProps {
 }
 
 export function BlogCardClient({ post }: BlogCardClientProps) {
-  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
+  const handleLinkClick = () => {
     NProgress.start();
     // Let Next.js handle navigation, TopProgressBar will handle NProgress.done()
   };

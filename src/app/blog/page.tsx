@@ -1,7 +1,5 @@
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { getSortedPostsData } from '@/lib/blog';
+import { getSortedPostsData } from '@/lib/blog'; // Updated import
 import type { BlogPost } from '@/lib/types'; // Updated import
 import { Container } from '@/components/ui/container';
 import { SectionTitle } from '@/components/ui/SectionTitle';

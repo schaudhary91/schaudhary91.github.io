@@ -10,7 +10,7 @@ import { MouseEvent } from 'react';
 
 export function HeroSection() {
 
-  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
+  const handleLinkClick = () => {
     NProgress.start();
   };
 

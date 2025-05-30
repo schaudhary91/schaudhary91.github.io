@@ -1,10 +1,19 @@
+
+"use client";
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { ArrowDown, FileText, Mail, Newspaper } from 'lucide-react'; 
 import Link from 'next/link';
 import Image from 'next/image';
+import NProgress from 'nprogress';
+import { MouseEvent } from 'react';
 
 export function HeroSection() {
+
+  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    NProgress.start();
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted to-background text-center overflow-hidden">
       <div className="absolute inset-0 opacity-10">
@@ -30,17 +39,17 @@ export function HeroSection() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4">
             <Button size="lg" asChild className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-              <Link href="#contact">
+              <Link href="#contact" onClick={handleLinkClick}>
                 Get in Touch <Mail className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-              <Link href="/resume/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Link href="/resume/resume.pdf" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>
                 Download CV <FileText className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild className="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-              <Link href="/blog">
+              <Link href="/blog" onClick={handleLinkClick}>
                 Explore Tech Threads <Newspaper className="ml-2 h-5 w-5" />
               </Link>
             </Button>

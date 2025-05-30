@@ -1,3 +1,5 @@
+
+"use client"; // Make this a client component to use NProgress and onClick
 import Link from 'next/link';
 import Image from 'next/image';
 import { getSortedPostsData, type BlogPost } from '@/lib/blog';
@@ -8,14 +10,26 @@ import { Badge } from '@/components/ui/badge';
 import { format } from 'date-fns';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import NProgress from 'nprogress';
+import type { MouseEvent } from 'react';
+import { useEffect, useState } from 'react';
 
-export const metadata = {
-  title: 'Tech Threads | Sandeep Chaudhary',
-  description: 'A collection of thoughts, tutorials, and insights on web development, UX engineering, and technology by Sandeep Chaudhary.',
-};
+// export const metadata = { // Metadata should be defined in generateMetadata for client components or moved to layout
+//   title: 'Tech Threads | Sandeep Chaudhary',
+//   description: 'A collection of thoughts, tutorials, and insights on web development, UX engineering, and technology by Sandeep Chaudhary.',
+// };
 
 export default function BlogIndexPage() {
-  const allPosts = getSortedPostsData();
+  const [allPosts, setAllPosts] = useState<BlogPost[]>([]);
+
+  useEffect(() => {
+    // Fetch posts on the client side for client components
+    setAllPosts(getSortedPostsData());
+  }, []);
+
+  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    NProgress.start();
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -27,12 +41,12 @@ export default function BlogIndexPage() {
           </SectionTitle>
           
           {allPosts.length === 0 ? (
-            <p className="text-center text-muted-foreground">No blog posts yet. Check back soon!</p>
+            <p className="text-center text-muted-foreground">Loading posts or no posts yet. Check back soon!</p>
           ) : (
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {allPosts.map((post: BlogPost) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} passHref legacyBehavior>
-                  <a className="block group">
+                  <a className="block group" onClick={handleLinkClick}>
                     <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
                       {post.coverImage && (
                         <div className="relative w-full h-48">

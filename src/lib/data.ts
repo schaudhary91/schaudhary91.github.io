@@ -1,3 +1,4 @@
+
 import type { EducationItem, ExperienceItem, SkillItem, NavLinkItem, ContactLinkItem } from './types';
 import { Briefcase, Code, Zap, Users, TrendingUp, Linkedin, Mail, FileText, Lightbulb, Settings, BarChartBig, Palette, Server, Cloud, Database, TestTube2, PenTool, Newspaper } from 'lucide-react';
 
@@ -113,8 +114,8 @@ export const skillsData: SkillItem[] = [
 
 export const contactLinks: ContactLinkItem[] = [
   { href: 'mailto:sachaudhary91@gmail.com', label: 'Email', icon: Mail },
-  { href: 'https://www.linkedin.com/in/sandeepchaudhary91/', label: 'LinkedIn', icon: Linkedin },
-  { href: '/resume/resume.pdf', label: 'Resume (PDF)', icon: FileText }, // Assuming a resume PDF is in public folder
+  { href: 'https://www.linkedin.com/in/sandeepchaudhary91/', label: 'LinkedIn', icon: Linkedin }, // Using the standard Linkedin icon from lucide-react
+  { href: '/resume/resume.pdf', label: 'Resume (PDF)', icon: FileText },
 ];
 
 export const overviewContent = {

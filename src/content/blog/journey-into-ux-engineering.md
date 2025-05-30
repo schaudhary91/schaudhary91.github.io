@@ -1,10 +1,10 @@
 ---
 title: "My Journey into UX Engineering"
-date: "2024-07-15"
+date: "2025-05-17"
 author: "Sandeep Chaudhary"
 slug: "journey-into-ux-engineering"
 summary: "Reflections on my career path and the evolving role of a UX Engineer."
-coverImage: "/images/my_journey_banner.png"
+coverImage: "/images/blog/my_journey_banner.png"
 coverImageAlt: "career path"
 dataAiHint: "career path"
 tags: ["career", "ux", "engineering"]

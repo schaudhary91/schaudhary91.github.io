@@ -339,18 +339,24 @@ body {
     transition: none !important;
   }
 
-  /* Hide specific buttons and interactive elements */
-  #home a[href="#contact"], /* Hero "Get in Touch" button */
-  #home a[href*="resume.pdf"], /* Hero "Download CV" button */
-  #home a[href="/blog"], /* Hero "Explore Tech Threads" button */
-  #home .absolute.bottom-10, /* Hero down arrow */
-  #contact button, /* All buttons in contact section */
-  #contact a[href^="mailto:"].text-primary, /* Let email address print, but hide button styling for the mailto link if it's styled like a button */
-  #contact a[href*="linkedin.com"].text-primary, /* Same for LinkedIn if styled as button */
-  article header button, /* "Back to Tech Threads" button in blog post */
-  .md\:hidden button[aria-label="Toggle menu"] { /* Mobile menu toggle - FIXED: Added opening brace */
+  /* Hide specific buttons and interactive elements - Part 1 */
+  #home a[href="#contact"],
+  #home a[href*="resume.pdf"],
+  #home a[href="/blog"],
+  #home .absolute.bottom-10,
+  #contact button,
+  /* #contact a[href^="mailto:"].text-primary, */ /* Problematic line commented out */
+  #contact a[href*="linkedin.com"].text-primary,
+  article header button {
     display: none !important;
   }
+
+  /* Hide specific buttons and interactive elements - Part 2 (Mobile Menu Toggle) */
+  /* SIMPLIFIED SELECTOR for mobile menu toggle to avoid parsing issues */
+  button[aria-label="Toggle menu"] { /* Mobile menu toggle */
+    display: none !important;
+  }
+
 
   /* General button styling for print (if any remain and need to be simple) */
   button {
@@ -514,4 +520,6 @@ body {
     page-break-before: auto;
   }
 }
+    
+
     
